@@ -18,3 +18,12 @@ out/production/Algorithms/graph/common/DftTask.class
 out/production/Algorithms/graph/common/EdgeType.class
 out/production/Algorithms/graph/common/Graph.class
 out/production/Algorithms/graph/common/VertexStatus.class
+out/production/Algorithms/graph/Dijkstra.class
+out/production/Algorithms/graph/Floyd.class
+out/production/Algorithms/graph/KruskalMinSpanningTree.class
+out/production/Algorithms/graph/MaxFlow.class
+out/production/Algorithms/graph/PrimMinSpanningTree.class
+out/production/Algorithms/graph/PrimOrDijkstra.class
+out/production/Algorithms/graph/common/Edge.class
+out/production/Algorithms/graph/common/SetUnion.class
+out/production/Algorithms/graph/common/Tuple.class

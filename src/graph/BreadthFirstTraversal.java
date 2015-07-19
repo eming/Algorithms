@@ -4,6 +4,8 @@ import graph.common.AdjacentNode;
 import graph.common.Graph;
 import graph.common.VertexStatus;
 
+import java.util.ArrayList;
+import java.util.Collections;
 import java.util.LinkedList;
 import java.util.Queue;
 
@@ -40,14 +42,13 @@ public class BreadthFirstTraversal {
             vertexStatuses[current] = VertexStatus.processed;
             processVertex(current);
             for (AdjacentNode adjacentNode : graph.vertices[current]) {
-                if (vertexStatuses[adjacentNode.to] != VertexStatus.processed) {
+                if (vertexStatuses[adjacentNode.to] != VertexStatus.processed || graph.isDirected) {
                     processEdge(current, adjacentNode.to, adjacentNode.weight);
-                }else {
-                    if (vertexStatuses[adjacentNode.to] == VertexStatus.undiscovered) {
-                        parents[adjacentNode.to] = current;
-                        queue.add(adjacentNode.to);
-                        vertexStatuses[adjacentNode.to] = VertexStatus.discovered;
-                    }
+                }
+                if (vertexStatuses[adjacentNode.to] == VertexStatus.undiscovered) {
+                    parents[adjacentNode.to] = current;
+                    queue.add(adjacentNode.to);
+                    vertexStatuses[adjacentNode.to] = VertexStatus.discovered;
                 }
             }
         }
@@ -62,21 +63,37 @@ public class BreadthFirstTraversal {
     }
 
     public void printShortUnweightedPath(int from, int to) {
+        Integer[] path = findShortUnweightedPath(from, to);
+        if (path.length == 0){
+            System.out.println("No such path");
+        }else {
+            for (Integer vertex: path){
+                System.out.print(vertex + " ");
+            }
+            System.out.println();
+        }
+    }
+
+    public Integer[] findShortUnweightedPath(int from, int to) {
         traverse(from);
+        Integer[] result = null;
         if (from == to) {
-            System.out.println((from+1) + " " + (to+1));
+            result = new Integer[]{from, to};
         } else {
             if (parents[to] == -1) {
-                System.out.println("There is no path");
+                result = new Integer[0];
             } else {
-                String s = " "+(to+1);
-                do  {
-                    s = " " + (parents[to]+1) + s;
+                ArrayList<Integer> list = new ArrayList<Integer>();
+                list.add(to);
+                while (parents[to]!=-1) {
                     to=parents[to];
-                }while (parents[to]==from);
-                System.out.println(s);
+                    list.add(to);
+                }
+                Collections.reverse(list);
+                result = list.toArray(new Integer[list.size()]);
             }
         }
+        return result;
     }
 }
 

@@ -5,6 +5,7 @@ package graph.common;
  */
 public class AdjacentNode {
     public int to;
+    //for max flow weight means residual
     public double weight;
 
     public AdjacentNode(int to, double weight) {
