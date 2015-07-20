@@ -27,3 +27,11 @@ out/production/Algorithms/graph/PrimOrDijkstra.class
 out/production/Algorithms/graph/common/Edge.class
 out/production/Algorithms/graph/common/SetUnion.class
 out/production/Algorithms/graph/common/Tuple.class
+out/production/Algorithms/dp/EditDistance$1.class
+out/production/Algorithms/dp/EditDistance.class
+out/production/Algorithms/dp/LinearPartition.class
+out/production/Algorithms/dp/LongestMonotoneSubSequence.class
+out/production/Algorithms/dp/MinimumWeightTriangulation.class
+out/production/Algorithms/dp/common/Cell.class
+out/production/Algorithms/dp/common/Decision.class
+out/production/Algorithms/heuristics/Backtracking.class

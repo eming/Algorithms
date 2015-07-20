@@ -1,7 +1,14 @@
+import dp.EditDistance;
+import dp.LinearPartition;
+import dp.LongestMonotoneSubSequence;
+import dp.MinimumWeightTriangulation;
 import graph.Dijkstra;
 import graph.Floyd;
 import graph.MaxFlow;
 import graph.PrimMinSpanningTree;
+import heuristics.Backtracking;
+
+import java.awt.geom.Point2D;
 
 public class Main {
     public static void main(String[] args) {
@@ -123,9 +130,23 @@ public class Main {
         4 5 3
         maxFlow.graph.isDirected = true;
         maxFlow.printMaxFlowPaths(0, 5);*/
-        MaxFlow maxFlow =new MaxFlow();
-        maxFlow.graph.isDirected = true;
-        maxFlow.init();
-        maxFlow.printMaxFlowPaths(0, 5);
+        /*MaxFlow maxFlow =new MaxFlow();
+        maxFlow.init();*/
+        /*Backtracking backtracking= new Backtracking();
+        backtracking.backtrack(new boolean[3],-1,3);*/
+        /*EditDistance editDistance= new EditDistance();
+        editDistance.printStringsMatch("thou shalt not","you should not");*/
+        /*LongestMonotoneSubSequence longestMonotoneSubSequence = new LongestMonotoneSubSequence();
+        longestMonotoneSubSequence.printLongestMonotoneSubSequence(new int[]{2, 4, 3, 5, 1, 7, 6, 9, 8});*/
+        /*LinearPartition linearPartition =new LinearPartition();
+        linearPartition.printPartitionResults(new int[]{1, 2, 3, 4, 5, 6, 7, 8, 9}, 3);*/
+        /*output should be 4.23606797749979*/
+        /*MinimumWeightTriangulation minimumWeightTriangulation =new MinimumWeightTriangulation();
+        minimumWeightTriangulation.printChords(new Point2D[]{
+                 new Point2D.Double(0,0)
+                ,new Point2D.Double(1,0)
+                ,new Point2D.Double(2,1)
+                ,new Point2D.Double(1,2)
+                ,new Point2D.Double(0,2)});*/
     }
 }
