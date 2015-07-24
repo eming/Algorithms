@@ -34,4 +34,8 @@ out/production/Algorithms/dp/LongestMonotoneSubSequence.class
 out/production/Algorithms/dp/MinimumWeightTriangulation.class
 out/production/Algorithms/dp/common/Cell.class
 out/production/Algorithms/dp/common/Decision.class
-out/production/Algorithms/heuristics/Backtracking.class
+out/production/Algorithms/heuristic/Backtracking.class
+out/production/Algorithms/geometry/ConvexHull.class
+out/production/Algorithms/geometry/Point2D$1.class
+out/production/Algorithms/geometry/Point2D$PolarOrder.class
+out/production/Algorithms/geometry/Point2D.class

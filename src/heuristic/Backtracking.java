@@ -1,4 +1,4 @@
-package heuristics;
+package heuristic;
 
 /**
  * Created by Emin Guliyev on 19/07/2015.

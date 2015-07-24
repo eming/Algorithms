@@ -1,14 +1,7 @@
-import dp.EditDistance;
-import dp.LinearPartition;
-import dp.LongestMonotoneSubSequence;
-import dp.MinimumWeightTriangulation;
-import graph.Dijkstra;
-import graph.Floyd;
-import graph.MaxFlow;
-import graph.PrimMinSpanningTree;
-import heuristics.Backtracking;
+import geometry.ConvexHull;
+import geometry.Point2D;
 
-import java.awt.geom.Point2D;
+import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
@@ -148,5 +141,24 @@ public class Main {
                 ,new Point2D.Double(2,1)
                 ,new Point2D.Double(1,2)
                 ,new Point2D.Double(0,2)});*/
+        /*5
+        1 2
+        2 3
+        4 5
+        20 10
+        6 4*/
+        /*Scanner scanIn = new Scanner(System.in);
+        int N = scanIn.nextInt();
+        Point2D[] points = new Point2D[N];
+        for (int i = 0; i < N; i++) {
+            int x = scanIn.nextInt();
+            int y = scanIn.nextInt();
+            points[i] = new Point2D(x, y);
+        }
+        ConvexHull graham = new ConvexHull(points);
+        for (Point2D p : graham.hull()) {
+            System.out.println(p);
+        }*/
+        
     }
 }
