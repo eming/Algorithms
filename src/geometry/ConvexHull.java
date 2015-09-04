@@ -1,7 +1,7 @@
 package geometry;
 
 /*************************************************************************
- *  Compilation:  javac GrahamaScan.java
+ *  Compilation:  javac GrahamScan.java
  *  Execution:    java GrahamScan < input.txt
  *  Dependencies: Point2D.java
  *
@@ -55,6 +55,7 @@ public class ConvexHull {
         // Graham scan; note that points[N-1] is extreme point different from points[0]
         for (int i = k2; i < N; i++) {
             Point2D top = hull.pop();
+            //<180 degree
             while (Point2D.ccw(hull.peek(), top, points[i]) <= 0) {
                 top = hull.pop();
             }

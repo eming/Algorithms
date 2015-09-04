@@ -159,6 +159,5 @@ public class Main {
         for (Point2D p : graham.hull()) {
             System.out.println(p);
         }*/
-        
     }
 }

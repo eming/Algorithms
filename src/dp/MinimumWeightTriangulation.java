@@ -5,6 +5,7 @@ import java.awt.geom.Point2D;
 /**
  * Created by Emin Guliyev on 20/07/2015.
  */
+//page 312
 public class MinimumWeightTriangulation {
     public Point2D[] polygon;
     public int length;

@@ -78,7 +78,7 @@ public class BreadthFirstTraversal {
         traverse(from);
         Integer[] result = null;
         if (from == to) {
-            result = new Integer[]{from, to};
+            //endless flow :)
         } else {
             if (parents[to] == -1) {
                 result = new Integer[0];

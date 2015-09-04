@@ -6,6 +6,7 @@ import dp.common.Decision;
 /**
  * Created by Emin Guliyev on 20/07/2015.
  */
+//first word is vertically second is horizontally
 public class EditDistance {
     public Cell[][] cells;
     public String first;

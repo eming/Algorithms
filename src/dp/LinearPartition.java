@@ -6,6 +6,7 @@ package dp;
 public class LinearPartition {
     public int[] sequence;
     public int k;
+    //0..n items * k partitions
     public int[][] maxSum;
     public int[][] lastDivisor;
     public int[] sumUntil;

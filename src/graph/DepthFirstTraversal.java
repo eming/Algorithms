@@ -159,6 +159,9 @@ public class DepthFirstTraversal {
             }
 
             if (edgeType == EdgeType.crossEdge){
+                //if not identified it means it has the path to pre ancestor,
+                //so from this pre ancestor to last common ancestor, from there to "from".
+                //there is circular path, so they should be in the same component
                 if (scc[to]==-1){
                     if (entryTimes[to] < entryTimes[lowVertexInTheSCC[from]]) {
                         lowVertexInTheSCC[from] = to;

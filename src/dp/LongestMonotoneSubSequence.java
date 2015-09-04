@@ -6,6 +6,8 @@ import java.util.Collections;
 /**
  * Created by Emin Guliyev on 20/07/2015.
  */
+//another solution is:longest common sub-sequence problem(edit distance without substitution)
+//, where the second string is the elements of S sorted in increasing order
 public class LongestMonotoneSubSequence {
     public int[] sequence;
     public int[] parents;
@@ -23,10 +25,10 @@ public class LongestMonotoneSubSequence {
             }
         }
 
-        System.out.println("Length of max sequence is "
-                +subSequenceEndingAt[sequence.length - 1]);
-
         int endingOfMax = getEndingOfMaxMonoSubSequence();
+
+        System.out.println("Length of max sequence is "
+                +subSequenceEndingAt[endingOfMax]);
 
         ArrayList<Integer> list = constructMaxMonoSubSequence(endingOfMax);
 
@@ -53,11 +55,9 @@ public class LongestMonotoneSubSequence {
     }
 
     private int getEndingOfMaxMonoSubSequence() {
-        int maxLength = 0;
-        int endingOfMax = -1;
-        for (int i = 0; i < subSequenceEndingAt.length; i++) {
-            if (maxLength<subSequenceEndingAt[i]){
-                maxLength=subSequenceEndingAt[i];
+        int endingOfMax = 0;
+        for (int i = 1; i < subSequenceEndingAt.length; i++) {
+            if (subSequenceEndingAt[endingOfMax]<subSequenceEndingAt[i]){
                 endingOfMax=i;
             }
         }

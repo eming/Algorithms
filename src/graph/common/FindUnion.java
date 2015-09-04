@@ -3,12 +3,12 @@ package graph.common;
 /**
  * Created by Emin Guliyev on 19/07/2015.
  */
-public class SetUnion {
+public class FindUnion {
     public int count;
     public int[] parents;
     public int[] size;
 
-    public SetUnion(int count){
+    public FindUnion(int count){
         this.count = count;
         parents = new int[count];
         size = new int[count];
